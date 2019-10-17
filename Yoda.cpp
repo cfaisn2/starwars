@@ -33,7 +33,7 @@ void Yoda::sePresenter() {
 }
 
 string Yoda::quel_est_ton_nom() const {
-    return adjectif+Rebel::quel_est_ton_nom();
+    return adjectif+" "+Rebel::quel_est_ton_nom();
 }
 
 void Yoda::telepathie(const string &message) {
