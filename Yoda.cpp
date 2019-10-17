@@ -11,7 +11,7 @@ Yoda::Yoda():Rebel("Yoda") {
 }
 
 void Yoda::coffrer(MembreEmpire &membreEmpire) {
-    cout<<"Au nom de l'alliance en je vous arrête";
+    parler("Au nom de l'alliance en je vous arrête");
     membreEmpire.sefaireEmprisonner(*this);
 }
 
