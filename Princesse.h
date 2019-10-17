@@ -18,7 +18,7 @@ public: bool etat;
 public:
     Princesse(const string &nom);
 
-    void seFaireKidnapper();
+    void seFaireKidnapper(const Hors_la_loi &hll);
     void seFaireLiberer(const Rebel &rebel);
     void changerdeRobe(const string &newcolor);
 

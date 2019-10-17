@@ -10,9 +10,9 @@ Yoda::Yoda():Rebel("Yoda") {
     adjectif="Maitre";
 }
 
-void Yoda::coffrer(MembreEmpire &membreEmpire) {
+void Yoda::coffrer(Hors_la_loi &hll) {
     parler("Au nom de l'alliance en je vous arrête");
-    membreEmpire.sefaireEmprisonner(*this);
+    hll.sefaireEmprisonner(*this);
 }
 
 void Yoda::sendMessage(const MembreEmpire &me) {

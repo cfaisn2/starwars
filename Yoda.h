@@ -18,7 +18,7 @@ public:
 
     void sePresenter() override;
 
-    void coffrer(MembreEmpire &membreEmpire) override;
+    void coffrer(Hors_la_loi &hll) override ;
     void sendMessage(const MembreEmpire &me);
 
     string quel_est_ton_nom() const override;

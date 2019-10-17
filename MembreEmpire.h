@@ -8,9 +8,11 @@
 
 #include "Humanoide.h"
 #include "Princesse.h"
+#include "Hors_la_loi.h"
+
 class Rebel;
 class Princesse;
-class MembreEmpire: public Humanoide {
+class MembreEmpire: public Humanoide, public Hors_la_loi {
 
 private:
     string rang;

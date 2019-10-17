@@ -30,8 +30,8 @@ void Rebel::tirer(const MembreEmpire &membreEmpire) {
 
 }
 
-void Rebel::coffrer(MembreEmpire &membreEmpire) {
-    membreEmpire.sefaireEmprisonner(*this);
+void Rebel::coffrer( Hors_la_loi &hll) {
+    hll.sefaireEmprisonner(*this);
 }
 
 void Rebel::liberer(Princesse &princesse) {

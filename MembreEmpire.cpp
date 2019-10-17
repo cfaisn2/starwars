@@ -12,7 +12,7 @@ Humanoide(nom),rang("soldat"),etat(false),nbprincesses(0),recompense(100) {
 
 void MembreEmpire::kidnapper(Princesse &princesse) {
 parler("si tu n'est pas avec moi "+princesse.quel_est_ton_nom()+" tu es contre moi!!");
-princesse.seFaireKidnapper();
+princesse.seFaireKidnapper(*this);
 nbprincesses++;
 }
 

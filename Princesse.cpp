@@ -9,14 +9,14 @@ Princesse::Princesse(const string &nom) : Humanoide(nom),couleur_robe("blanche")
     etat=false; //libre
 }
 
-void Princesse::seFaireKidnapper()  {
+void Princesse::seFaireKidnapper(const Hors_la_loi &hll)  {
     etat=true;
     parler("AHHHHHHHHHHHH");
 }
 
 void Princesse::changerdeRobe(const string &newcolor) {
     couleur_robe=newcolor;
-    parler("Regardez ma nouvelle couleur robe "+couleur_robe);
+    parler("Regardez ma nouvelle ,couleur robe "+couleur_robe);
 }
 
 void Princesse::seFaireLiberer(const Rebel &rebel) {

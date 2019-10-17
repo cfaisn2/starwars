@@ -5,6 +5,7 @@
 #include "MembreEmpire.h"
 #include "Barman.h"
 #include "Yoda.h"
+#include "Traitre.h"
 
 
 int main() {
@@ -13,14 +14,14 @@ Humanoide h1=Humanoide("human");
 h1.parler("bonjour");
 h1.sePresenter();
 h1.boire();
-
+MembreEmpire me=MembreEmpire("Vador");
+me.sePresenter();
 Princesse princesse=Princesse("Leila");
 princesse.sePresenter();
 princesse.boire();
 princesse.changerdeRobe("blanche");
-princesse.seFaireKidnapper();
-MembreEmpire me=MembreEmpire("Vador");
-me.sePresenter();
+princesse.seFaireKidnapper(me);
+
 Rebel rebel=Rebel("Luk");
 rebel.sePresenter();
 rebel.tirer(me);
@@ -33,7 +34,10 @@ Barman b2=Barman("René","Starwars Bar");
 b2.sePresenter();
 Yoda y;
 y.sePresenter();
-y.sendMessage(me);
+y.coffrer(me);
+Traitre t("traitre");
+t.kidnapper(princesse);
+
 
 
 

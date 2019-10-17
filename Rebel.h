@@ -15,6 +15,7 @@ class MembreEmpire;
 class Princesse;
 class Alliance;
 class Yoda;
+class Hors_la_loi;
 class Rebel: public Humanoide {
 
 private:
@@ -30,7 +31,7 @@ public:
 
     void tirer(const MembreEmpire &membreEmpire);
 
-    virtual void coffrer(MembreEmpire &membreEmpire);
+    virtual void coffrer(Hors_la_loi &hll);
     void liberer(Princesse &princesse);
 
     void sePresenter() override;
