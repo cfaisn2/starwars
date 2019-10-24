@@ -7,6 +7,7 @@
 #include "Yoda.h"
 #include "Alliance.h"
 #include "Wookies.h"
+#include <typeinfo>
 
 Rebel::Rebel(const string &nom) : Humanoide(nom),popularite(0),adjectif("padawan") {
 
@@ -58,7 +59,7 @@ void Rebel::recevoirMessage(Yoda &yoda) {
 }
 
 void Rebel::sebattre(Duel &duel) {
-    if(typeid(duel)==typeid(MembreEmpire)) {
+    if(typeid(duel)==typeid(Hors_la_loi)) {
         srand(time(NULL));
         int forcerebel = 6;
         int forced = 6;

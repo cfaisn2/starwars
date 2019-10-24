@@ -5,6 +5,7 @@
 #include <iostream>
 #include "MembreEmpire.h"
 #include "Wookies.h"
+#include <typeinfo>
 
 MembreEmpire::MembreEmpire(const string &nom) :
 Humanoide(nom),rang("soldat"),etat(false),nbprincesses(0),recompense(100) {
