@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "MembreEmpire.h"
+#include "Wookies.h"
 
 MembreEmpire::MembreEmpire(const string &nom) :
 Humanoide(nom),rang("soldat"),etat(false),nbprincesses(0),recompense(100) {
@@ -37,6 +38,32 @@ void MembreEmpire::sePresenter() {
 
 string MembreEmpire::quel_est_ta_boisson_favorite() const {
     return "Vin de fleurs";
+}
+
+void MembreEmpire::sebattre(Duel &duel) {
+    if(typeid(duel)==typeid(Rebel)) {
+        srand(time(NULL));
+        int forcerebel = 6;
+        int forced = 6;
+
+
+        if (typeid(&duel) == typeid(Wookies)) {
+            forced = 36;
+        }
+        int hitrebel = rand() % forcerebel;
+        int hitd = rand() % forced;
+        if (hitrebel > hitd) {
+            cout << quel_est_ton_nom() << " a gagner son duel avec " << duel.quel_est_ton_nom()<<endl;
+        } else if (hitd > hitrebel) {
+
+            cout << duel.quel_est_ton_nom() << " a gagner son duel avec " << quel_est_ton_nom()<<endl;
+        } else {
+            cout << "Match nul"<<endl;
+        }
+    } else
+        cout<<"Combat impossible"<<endl;
+
+
 }
 
 

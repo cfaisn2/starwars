@@ -6,6 +6,8 @@
 #include "Barman.h"
 #include "Yoda.h"
 #include "Traitre.h"
+#include "PrincesseTraitre.h"
+#include "Wookies.h"
 
 
 int main() {
@@ -37,8 +39,13 @@ y.sePresenter();
 y.coffrer(me);
 Traitre t("traitre");
 t.kidnapper(princesse);
-
-
+PrincesseTraitre pt("Princesse Traitre");
+pt.kidnapper(princesse);
+Wookies w2("Ch1");
+Wookies w("Chubacca");
+w.sebattre(me);
+me.sebattre(rebel);
+w.sebattre(w2);
 
 
 

@@ -10,13 +10,15 @@
 
 
 #include "Alliance.h"
+#include "Duel.h"
 
 class MembreEmpire;
 class Princesse;
 class Alliance;
 class Yoda;
 class Hors_la_loi;
-class Rebel: public Humanoide {
+class Wookies;
+class Rebel: public Humanoide,public Duel {
 
 private:
 
@@ -40,7 +42,9 @@ public:
     void recevoirMessage(Yoda &yoda);
 
 
+    void sebattre(Duel &duel) override ;
 
+    string quel_est_ton_nom() const override;
 };
 
 

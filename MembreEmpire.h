@@ -12,7 +12,7 @@
 
 class Rebel;
 class Princesse;
-class MembreEmpire: public Humanoide, public Hors_la_loi {
+class MembreEmpire: public Humanoide, public Hors_la_loi ,public Duel{
 
 private:
     string rang;
@@ -32,7 +32,7 @@ public:
 
     string quel_est_ta_boisson_favorite() const override;
 
-
+    void sebattre(Duel &duel);
 };
 
 

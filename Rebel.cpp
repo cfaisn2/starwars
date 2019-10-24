@@ -6,6 +6,7 @@
 #include "Rebel.h"
 #include "Yoda.h"
 #include "Alliance.h"
+#include "Wookies.h"
 
 Rebel::Rebel(const string &nom) : Humanoide(nom),popularite(0),adjectif("padawan") {
 
@@ -23,8 +24,8 @@ void Rebel::tirer(const MembreEmpire &membreEmpire) {
 
 
 
-        cout << "Beau coup de sabre laser";
-        parler("Que la force soit avec moi");
+    cout << "Beau coup de sabre laser";
+    parler("Que la force soit avec moi");
 
 
 
@@ -55,6 +56,42 @@ void Rebel::recevoirMessage(Yoda &yoda) {
 
 
 }
+
+void Rebel::sebattre(Duel &duel) {
+    if(typeid(duel)==typeid(MembreEmpire)) {
+        srand(time(NULL));
+        int forcerebel = 6;
+        int forced = 6;
+
+
+        if (typeid(*this) == typeid(Wookies)) {
+            forcerebel = 36;
+        }
+        if (typeid(&duel) == typeid(Wookies)) {
+            forced = 36;
+        }
+
+        int hitrebel = rand() % forcerebel;
+        int hitd = rand() % forced;
+
+        if (hitrebel > hitd) {
+            cout << quel_est_ton_nom() << " a gagner son duel avec " << duel.quel_est_ton_nom()<<endl;
+        } else if (hitd > hitrebel) {
+
+            cout << duel.quel_est_ton_nom() << " a gagner son duel avec " << quel_est_ton_nom()<<endl;
+        } else {
+            cout << "Match nul";
+        }
+    } else
+        cout<<"Combat impossible"<<endl;
+}
+
+string Rebel::quel_est_ton_nom() const {
+    return Humanoide::quel_est_ton_nom();
+}
+
+
+
 
 
 
